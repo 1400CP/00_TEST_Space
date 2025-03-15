@@ -1,0 +1,49 @@
+package com.kh.chap02_tcp.run;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.net.InetAddress;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.net.UnknownHostException;
+import java.nio.Buffer;
+import java.util.Scanner;
+
+public class SeverProgram {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		BufferedReader br = null;
+		PrintWriter pw = null;
+		
+		int port = 4000;
+		
+		ServerSocket server = null;
+		
+		try {
+			InetAddress localHost = InetAddress.getLocalHost();
+		} catch (UnknownHostException e1) {
+			e1.printStackTrace();
+		}
+		
+		try {
+			server = new ServerSocket(port);
+			
+			System.out.println("클라이언트의 요청을 기다리고 있습니다.");
+			
+			Socket socket = server.accept();
+			System.out.println(socket.getInetAddress().getHostAddress() + "가 연결을 요청함");
+			
+			
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		
+	}
+
+}

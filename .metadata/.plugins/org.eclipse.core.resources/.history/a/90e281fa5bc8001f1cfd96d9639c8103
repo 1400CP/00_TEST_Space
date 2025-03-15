@@ -1,0 +1,24 @@
+package com.kh.chap02_tcp.run;
+
+import java.io.BufferedReader;
+import java.io.PrintWriter;
+import java.nio.Buffer;
+import java.util.Scanner;
+
+public class SeverProgram {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		BufferedReader br = null;
+		PrintWriter pw = null;
+		
+		int port = 4000;
+		
+		
+		
+		
+	}
+
+}

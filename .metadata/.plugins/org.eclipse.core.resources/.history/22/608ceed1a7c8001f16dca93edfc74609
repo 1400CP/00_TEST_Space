@@ -1,0 +1,70 @@
+package com.kh.test3.run;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.InetAddress;
+import java.net.Socket;
+import java.net.UnknownHostException;
+import java.util.Scanner;
+
+public class Test3_1{
+	
+	/*
+	public void client() {
+		
+		// 데이터를 주고 받을 스캔 어디갔어?
+		// Scanner sc = new Scanner(System.in);
+		
+		// 입출력의 초기화 다 어디갔어?
+		BufferedReader br = null;
+		PrintWriter pw = null;
+				
+		int port = 3000;
+		
+		// 클라이언트구나, 클라이언트면 IP주소를 받아야지!
+		String serverIP;
+			
+			try {
+				serverIP = "192.168.20.34";
+				
+				Socket socket = new Socket(serverIP, port);
+				
+				// IP 주소하고 포트 알아서 연결은 어떻게 하게?
+				// 서버에서 자료주고 연결 포트 열면 끝이야?
+				// 데이터를 주고 받아야지.
+				// while 반복문 만들어서 데이터를 입출력해야지.
+				
+				
+				// 이하 중간 생략...
+				
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			
+		
+	}
+	*/
+	
+	public void client() {
+		
+		BufferedReader br = null;
+		PrintWriter pw = null;
+				
+		int port = 3000;
+		
+		String serverIP;
+		
+		try {
+			serverIP = "192.168.20.44"; // 192.168.20.44
+			
+			Socket socket = new Socket(serverIP, port);
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	
+	}
+	
+}

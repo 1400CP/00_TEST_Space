@@ -1,0 +1,41 @@
+package com.kh.chap02_tcp.run;
+
+import java.io.BufferedReader;
+import java.io.PrintWriter;
+import java.net.InetAddress;
+import java.net.Socket;
+import java.net.UnknownHostException;
+import java.util.Scanner;
+
+public class ClientProgram {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		BufferedReader br = null;
+		PrintWriter pw = null;
+		
+		Socket socket = null;
+		
+		int port = 4000;
+		
+		String serverIP = null;
+		
+		try {
+			InetAddress localHost = InetAddress.getLocalHost();
+			System.out.println(localHost);
+			
+			serverIP = localHost.getHostAddress();
+			
+			
+		} catch (UnknownHostException e) {
+			e.printStackTrace();
+		}
+		
+		
+		
+
+	}
+
+}

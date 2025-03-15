@@ -1,0 +1,36 @@
+package com.kh.test3.run;
+
+import java.io.IOException;
+import java.net.InetAddress;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class Test3_2 {
+	
+	public void server() {
+		
+		int port = 3000;
+		
+		ServerSocket server;
+		// 입출력의 초기화 다 어디갔어?
+		// 서버 초기화 어디갔어?
+		
+		try {
+			server = new ServerSocket(port);
+			
+			while(true ) {
+				Socket client = server.accept();
+				
+			}
+			
+			// 이하 코드는 중간 생략...
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		
+		
+	}
+
+}

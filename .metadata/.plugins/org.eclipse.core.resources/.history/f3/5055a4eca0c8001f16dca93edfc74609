@@ -1,0 +1,36 @@
+package com.kh.test3.run;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+import java.util.Scanner;
+
+public class Test3 {
+	
+	public void client() {
+		
+		// 스캔 어디갔어?
+		// Scanner sc = new Scanner(System.in);
+		
+		
+		BufferedReader br = new BufferedReader(null);// 초기화 다 어디갔어?
+		PrintWriter pw = new PrintWriter(null);
+				
+		int port = 3000;
+		
+		// 서버 초기화 어디갔어?
+		String serverIP;
+		
+		try {
+			serverIP = InetAddress.getLocalHost().getHostAddress();
+			
+			// 중간 생략...
+		} catch (UnknownHostException e) {
+			e.printStackTrace();
+		}
+		
+	}
+
+}

@@ -1,0 +1,69 @@
+package com.kh.chap02_tcp.run;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.InetAddress;
+import java.net.Socket;
+import java.net.UnknownHostException;
+import java.util.Scanner;
+
+public class ClientProgram {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		BufferedReader br = null;
+		PrintWriter pw = null;
+		
+		Socket socket = null;
+		
+		int port = 4000;
+		
+		String serverIP = null;
+			
+			try {
+				serverIP = "192.168.219.155";
+				
+				socket = new Socket(serverIP, port);
+				
+				if(socket != null) {
+					System.out.println("서버와의 연결이 성공됐습니다.");
+				
+					br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+					pw = new PrintWriter(socket.getOutputStream());
+				
+					while(true) {
+						System.out.println("서버에게 보낼 내용 : ");
+						String sendMessage = sc.nextLine();
+						
+						pw.print(sendMessage);
+						pw.flush();
+						
+						String message = br.readLine();
+						System.out.println("서버로부터 전달받은 메시지 : " + message);
+						
+					}
+				
+				}
+				
+			} catch (IOException e) {
+				e.printStackTrace();
+			} finally {
+				
+				try {
+					pw.close();
+					br.close();
+					socket.close();
+					
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+				
+			}
+
+	}
+
+}

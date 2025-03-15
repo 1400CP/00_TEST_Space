@@ -1,0 +1,76 @@
+package com.kh.test3.run;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.InetAddress;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class Test3_2 {
+	
+	/*
+	public void server() {
+		
+		BufferedReader br = null;
+		PrintWriter pw = null;
+		
+		int port = 3000;
+		
+		ServerSocket server;
+		// 입출력의 초기화 다 어디갔어?
+		// 서버 초기화 어디갔어?
+		
+		try {
+			server = new ServerSocket(port);
+			
+			
+			
+			while(true ) {
+				Socket client = server.accept();
+				// 무슨 클라이언트에서 서버자료를 받기만 해?
+				
+				// 클라이언트에서 서버자료를 받았으면,
+				// 그쪽에서 자료를 출력할 테니까,
+				// 서버에서 자료를 입력받아야지.
+			}
+			
+			
+			
+			// 이하 코드는 중간 생략...
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		
+		
+	}
+	*/
+	
+public static void main(String[] args) {
+//	public void server() {		
+			BufferedReader br = null;
+			PrintWriter pw = null;
+			
+			int port = 3000;
+			
+			ServerSocket server;
+			
+			try {
+				server = new ServerSocket(port);
+				
+				while(true ) {
+					Socket client = server.accept();
+				}
+				
+				// 이하 코드는 중간 생략...
+				
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			
+	}
+	
+}
